@@ -10,8 +10,8 @@ export default function Hero({ colors }) {
             </mesh>
     
             {/* Body */}
-            <mesh position={[0, 1.5, 0]}>
-                <boxGeometry args={[1, 2, 0.5]}/>
+            <mesh position={[0, 1.25, 0]}>
+                <boxGeometry args={[1, 1.5, 0.5]}/>
                 <meshStandardMaterial color={colors.body}/>
             </mesh>
 

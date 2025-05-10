@@ -5,6 +5,9 @@ import { OrbitControls } from '@react-three/drei'
 import { useControls } from "leva";
 
 import Hero from './Components/Hero';
+import Cube from './Components/Cube';
+// import Boy from './Components/Boy';
+import Scene from './Components/Scene';
 import './App.css';
 import React from "react";
 
@@ -37,13 +40,20 @@ function App() {
 
   return (
     <div id='canvas-container' className="App">
-      <Canvas width={100} height={100}>
+      <Scene />
+
+      <Canvas camera={{ position: [5, 3, 5], fov: 50}} className='first_canvas'>
         {/* <RotatingBox /> */}
         <Hero colors={colors}/>
-        <ambientLight intensity={0.1}/>
-        <directionalLight position={[0, 0, 5]} intensity={1}/>
+
+        {/* <Boy position={[0, 0, 0]}/> */}
+        {/* <Scene position={[0, 0, 0]}/> */}
+
+        <ambientLight intensity={0.8}/>
+        <directionalLight position={[5, 5, 5]} intensity={1}/>
         <OrbitControls />
       </Canvas>
+
     </div>
   );
 }

@@ -5,3 +5,12 @@
     margin: 10px;
     background-color: beige;
 }
+
+.App Canvas {
+    width: 100vw;
+    height: 100vw;
+}
+
+.first_canvas {
+    background-color: beige;
+}
